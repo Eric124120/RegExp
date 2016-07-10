@@ -3,6 +3,10 @@
 ## 内容
 * [一、基本语法](#dev-baseinfo)
 * [二、RegExp对象的test、exec、compile的作用](#dev-regexp)
+
+    1、test(#dev-regexp-test)
+    2、test(#dev-regexp-exec)
+    3、test(#dev-regexp-compile)
 * [三、实际应用](#dev-apply)
 
 <a name="dev-baseinfo"></a>
