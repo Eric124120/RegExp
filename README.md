@@ -14,8 +14,24 @@
 
 <a name="dev-baseinfo"></a>
 ## 一、基本语法
+    匹配字符串
+    ```javascript
+        var str = 'I am Eric,24 years old this year,come from hainan.';
+    ```
 <a name="dev-baseinfo-1"></a>
 ###1、特殊字符
+    $ 匹配输入字符串的结尾位置
+    ```javascript
+        /hainan.$/.test(str); // 输出 true
+        /hainan$/.test(str); // 输出 false
+    ```
+    ^ 匹配输入字符串的开始位置;在方括号表达式中使用,表示不接受该字符集合。
+    ```javascript
+        /^I am Eric/.test(str); // 输出 true
+        /[^eric]/.test('tom'); // 输出 false
+        /[^eric]/.test('eric'); // 输出 true
+    ```
+    
 
 <a name="dev-baseinfo-2"></a>
 ###2、字符定位
@@ -38,7 +54,7 @@ RegExp对象的构造函数可以带一个或两个参数.
 ```javascript
     var gRex = new RegExp('cat', 'g');      <==> var gRex = /cat/g; 全局匹配
     var iRex = new RegExp('cat', 'i');      <==> var iRex = /cat/i; 不区分大小写
-    var igRex = new RegExp('cat', 'ig');    <==> var iRex = /cat/ig; 全局匹配且不区分大小写
+    var igRex = new RegExp('cat', 'ig');    <==> var igRex = /cat/ig; 全局匹配且不区分大小写
 ```
 <a name="dev-regexp-test"></a>
 ###1.test
