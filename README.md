@@ -14,21 +14,21 @@
 
 <a name="dev-baseinfo"></a>
 ## 一、基本语法
-    匹配字符串
 
     ```javascript
+        // 匹配字符串
         var str = 'I am Eric,24 years old this year,come from hainan.';
     ```
 <a name="dev-baseinfo-1"></a>
 ###1、特殊字符
 
-    $ 匹配输入字符串的结尾位置
     ```javascript
+        // $ 匹配输入字符串的结尾位置
         /hainan.$/.test(str); // 输出 true
         /hainan$/.test(str); // 输出 false
     ```
-    ^ 匹配输入字符串的开始位置;在方括号表达式中使用,表示不接受该字符集合。
     ```javascript
+        // ^ 匹配输入字符串的开始位置;在方括号表达式中使用,表示不接受该字符集合。
         /^I am Eric/.test(str); // 输出 true
         /[^eric]/.test('tom'); // 输出 false
         /[^eric]/.test('eric'); // 输出 true
