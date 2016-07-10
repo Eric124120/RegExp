@@ -2,6 +2,10 @@
 
 ## 内容
 * [一、基本语法](#dev-baseinfo)
+ * [1、特殊字符](#dev-baseinfo-1)
+ * [2、字符定位](#dev-baseinfo-2)
+ * [3、重复匹配](#dev-baseinfo-3)
+ * [4、非打印字符](#dev-baseinfo-4)
 * [二、RegExp对象的test、exec、compile的作用](#dev-regexp)
  * [1、test](#dev-regexp-test)
  * [2、exec](#dev-regexp-exec)
@@ -10,6 +14,17 @@
 
 <a name="dev-baseinfo"></a>
 ## 一、基本语法
+<a name="dev-baseinfo-1"></a>
+###1、特殊字符
+
+<a name="dev-baseinfo-2"></a>
+###2、字符定位
+
+<a name="dev-baseinfo-3"></a>
+###3、重复匹配
+
+<a name="dev-baseinfo-4"></a>
+###4、非打印字符
 
 <a name="dev-regexp"></a>
 ## 二、RegExp对象的test、exec、compile的作用
