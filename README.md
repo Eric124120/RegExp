@@ -12,7 +12,9 @@
 ## 二、RegExp对象的test、exec、compile的作用
 
 ```
-RegExp对象的构造函数可以带一个或两个参数.第一个参数是描述需要进行匹配的模式字符串;如果有第二个参数,这个参数则指定了额外的处理指令.举个栗子：
+RegExp对象的构造函数可以带一个或两个参数.
+第一个参数是描述需要进行匹配的模式字符串;如果有第二个参数,
+这个参数则指定了额外的处理指令.
 ```
 
 ```javascript
@@ -30,6 +32,7 @@ RegExp对象的构造函数可以带一个或两个参数.第一个参数是描�
 ```
     输出true
 2.exec
+
     exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。
 ```javascrtipt
     var rex = new RegExp("cat",'ig'),
@@ -44,6 +47,32 @@ RegExp对象的构造函数可以带一个或两个参数.第一个参数是描�
 ```
     输出 cat,cat,cat,null,
 3.compile
+
+    compile方法用于改变 RegExp,既可以改变检索模式，也可以添加或删除第二个参数.
+
+3.1
+```javascrtipt
+    var rex = new RegExp("cat"),
+        str = "cat say miao miao";
+
+    document.write(rex.test(str),',');
+
+    rex.compile("dog");
+    document.write(rex.test(str),',');
+```
+    输出 true,false,
+
+3.2
+```javascrtipt
+    var rex = new RegExp("cat"),
+        str = "Cat say miao miao";
+
+    document.write(rex.test(str),',');
+
+    rex.compile("cat",'i');
+    document.write(rex.test(str),',');
+```
+    输出 false,true,
 
 <a name="dev-apply"></a>
 ## 三、实际应用
