@@ -26,7 +26,7 @@ RegExp对象的构造函数可以带一个或两个参数.
     var igRex = new RegExp('cat', 'ig');    <==> var iRex = /cat/ig; 全局匹配且不区分大小写
 ```
 <a name="dev-regexp-test"></a>
-1.test
+###1.test
 
     test() 方法检索字符串中的指定值。返回值是 true 或 false。
 ```javascript
@@ -57,7 +57,7 @@ RegExp对象的构造函数可以带一个或两个参数.
 
     compile方法用于改变 RegExp,既可以改变检索模式，也可以添加或删除第二个参数.
 
-3.1 改变检索模式
+####3.1 改变检索模式
 ```javascrtipt
     var rex = new RegExp("cat"),
         str = "cat say miao miao";
@@ -69,7 +69,7 @@ RegExp对象的构造函数可以带一个或两个参数.
 ```
     输出 true,false,
 
-3.2 第二个参数定义
+####3.2 第二个参数定义
 ```javascrtipt
     var rex = new RegExp("cat"),
         str = "Cat say miao miao";
