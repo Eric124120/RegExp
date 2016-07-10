@@ -15,11 +15,13 @@
 <a name="dev-baseinfo"></a>
 ## 一、基本语法
     匹配字符串
+
     ```javascript
         var str = 'I am Eric,24 years old this year,come from hainan.';
     ```
 <a name="dev-baseinfo-1"></a>
 ###1、特殊字符
+
     $ 匹配输入字符串的结尾位置
     ```javascript
         /hainan.$/.test(str); // 输出 true
