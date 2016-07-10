@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template</title>
+</head>
+<body>
+	<script type="text/html" id='tmpl'>
+		<%  var len=3,i=0; %>
+		<%  for(;len>i;i++){ %>
+		<div style="background: red;">
+			<p><%= name %></p>
+			<p><%= age %></p>
+			<p><%= info %></p>
+		</div>
+		<% } %>
+	</script>
+	<script src="/lib/js/jquery.js"></script>
+	<script src="/lib/js/tmpl.js"></script>
+	<script type="text/javascript">
+		var tmpl = $('#tmpl').html(),
+			body
+			myObj = {
+				name: "Eric",
+				age: 20,
+				info: "there is coder"
+			};
+		var $tmpl = $(App.template(tmpl,myObj));
+		$('body').append($tmpl);
+
+
+		function template(str,obj) {
+			var p=[];
+			str = str.replace(/[\r\t\n]/g, " ");
+            str = str.split("<%").join("\t");
+            str = str.replace(/((^|%>)[^\t]*)'/g, "$1\r");
+            str = str.replace(/\t=(.*?)%>/g, "',$1,'");
+            str = str.split("\t").join("');");
+            str = str.split("%>").join("p.push('");
+            str = str.split("\r").join("\\'");
+            console.log(str);
+
+            with(obj||{}){
+            	p.push(str);
+            }
+
+            return p.join('');
+		}
+
+
+
+
+	</script>
+</body>
+</html>

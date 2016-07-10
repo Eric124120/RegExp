@@ -11,7 +11,10 @@
 <a name="dev-regexp"></a>
 ## 二、RegExp对象的test、exec、compile的作用
 
-    RegExp对象的构造函数可以带一个或两个参数.第一个参数是描述需要进行匹配的模式字符串;如果有第二个参数,这个参数则指定了额外的处理指令.举个栗子：
+```
+RegExp对象的构造函数可以带一个或两个参数.第一个参数是描述需要进行匹配的模式字符串;如果有第二个参数,这个参数则指定了额外的处理指令.举个栗子：
+```
+
 ```javascript
     var gRex = new RegExp('cat', 'g');   <==> var rex = /cat/g; 全局匹配
     var iRex = new RegExp('cat', 'i');   <==> var rex = /cat/i; 不区分大小写
